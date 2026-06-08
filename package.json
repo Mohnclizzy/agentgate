@@ -1,0 +1,36 @@
+{
+  "name": "agentgate",
+  "version": "0.1.0",
+  "description": "Policy-as-code firewall for AI agent tool calls.",
+  "type": "module",
+  "bin": {
+    "agentgate": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "agentgate": "tsx src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "agents",
+    "security",
+    "firewall",
+    "ai"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^14.0.2",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.14"
+  }
+}

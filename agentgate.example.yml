@@ -1,0 +1,22 @@
+policy:
+  defaultAction: allow
+  tools:
+    deny:
+      - read_secret
+    approve:
+      - shell
+      - run_command
+      - execute_command
+  riskPatterns:
+    - action: deny
+      pattern: "(?:^|[\\\\/])(?:\\.env(?:\\.[^\\\\/]*)?|id_rsa|id_ed25519|[^\\\\/]+\\.(?:pem|key))"
+      reason: "Environment and private-key files are not exposed to agents"
+    - action: approve
+      pattern: "\\b(rm\\s+-rf|git\\s+push|kubectl\\s+delete|terraform\\s+apply|drop\\s+table|deploy)\\b"
+      reason: "Destructive or external-impact actions require approval"
+
+audit:
+  path: .agentgate/audit.jsonl
+
+approval:
+  mode: deny
