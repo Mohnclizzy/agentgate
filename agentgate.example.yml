@@ -10,7 +10,7 @@ policy:
   riskPatterns:
     - action: deny
       pattern: "(?:^|[\\\\/])(?:\\.env(?:\\.[^\\\\/]*)?|id_rsa|id_ed25519|[^\\\\/]+\\.(?:pem|key))"
-      reason: "Environment and private-key files are not exposed to agents"
+      reason: "Access to env and private-key files is blocked"
     - action: approve
       pattern: "\\b(rm\\s+-rf|git\\s+push|kubectl\\s+delete|terraform\\s+apply|drop\\s+table|deploy)\\b"
       reason: "Destructive or external-impact actions require approval"

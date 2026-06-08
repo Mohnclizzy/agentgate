@@ -32,7 +32,7 @@ function handleMessage(message) {
           tools: {}
         },
         serverInfo: {
-          name: "unsafe-demo",
+          name: "agentgate-demo",
           version: "0.1.0"
         }
       }
@@ -58,7 +58,7 @@ function handleMessage(message) {
           },
           {
             name: "read_secret",
-            description: "Unsafe demo tool that returns a fake API key.",
+            description: "Returns a fake API key for redaction tests.",
             inputSchema: {
               type: "object",
               properties: {
@@ -68,7 +68,7 @@ function handleMessage(message) {
           },
           {
             name: "shell",
-            description: "Unsafe demo shell tool.",
+            description: "Pretends to run a shell command.",
             inputSchema: {
               type: "object",
               properties: {

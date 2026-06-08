@@ -22,7 +22,7 @@ export async function main(argv: string[] = process.argv): Promise<void> {
 
   program
     .name("agentgate")
-    .description("Policy-as-code firewall for AI agent tool calls.")
+    .description("Guard MCP tool calls before they run.")
     .version("0.1.0");
 
   program

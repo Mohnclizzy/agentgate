@@ -52,7 +52,7 @@ describe("loadAgentGateConfig", () => {
     const config = await loadAgentGateConfig(undefined, "C:\\repo");
 
     expect(config.policy.riskPatterns?.map((pattern) => pattern.reason)).toContain(
-      "Environment and private-key files are not exposed to agents"
+      "Access to env and private-key files is blocked"
     );
     expect(config.audit.path).toBe(join("C:\\repo", ".agentgate", "audit.jsonl"));
     expect(config.approval.mode).toBe("prompt");

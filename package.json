@@ -1,7 +1,7 @@
 {
   "name": "agentgate",
   "version": "0.1.0",
-  "description": "Policy-as-code firewall for AI agent tool calls.",
+  "description": "Guard MCP tool calls before they run.",
   "type": "module",
   "bin": {
     "agentgate": "./dist/index.js"

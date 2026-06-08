@@ -26,7 +26,7 @@ export function defaultConfig(cwd: string): AgentGateConfig {
         {
           action: "deny",
           pattern: "(?:^|[\\\\/])(?:\\.env(?:\\.[^\\\\/]*)?|id_rsa|id_ed25519|[^\\\\/]+\\.(?:pem|key))",
-          reason: "Environment and private-key files are not exposed to agents"
+          reason: "Access to env and private-key files is blocked"
         },
         {
           action: "approve",

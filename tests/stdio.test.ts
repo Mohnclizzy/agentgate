@@ -31,7 +31,7 @@ describe("runStdioProxy", () => {
 
     const run = runStdioProxy({
       command: process.execPath,
-      args: ["examples/unsafe-mcp-server.mjs"],
+      args: ["examples/demo-mcp-server.mjs"],
       cwd,
       sessionId: "s1",
       input,
