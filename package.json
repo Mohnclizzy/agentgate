@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "smoke:filesystem": "node examples/filesystem-smoke.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "agentgate": "tsx src/index.ts"

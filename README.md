@@ -35,6 +35,17 @@ You should see:
 - `tools/call` for `read_secret` returns an AgentGate blocked tool result.
 - `.agentgate/audit.jsonl` records the decision.
 
+## Real Filesystem Smoke Test
+
+This runs AgentGate against the official filesystem MCP server from npm. It creates a temporary directory with `notes.txt` and `.env`, confirms the safe read works, and confirms the `.env` read is blocked.
+
+```bash
+npm run build
+npm run smoke:filesystem
+```
+
+The script uses `npx -y @modelcontextprotocol/server-filesystem`.
+
 ## Config
 
 ```yaml
